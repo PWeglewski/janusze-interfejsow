@@ -2,15 +2,14 @@
 
 /**
  * @ngdoc function
- * @name januszeInterfejsowApp.controller:AboutCtrl
+ * @name januszeInterfejsowApp.controller:ProjectsCtrl
  * @description
- * # AboutCtrl
+ * # ProjectsCtrl
  * Controller of the januszeInterfejsowApp
  */
 angular.module('januszeInterfejsowApp')
-  .controller('AboutCtrl', function ($rootScope, $window, $route) {
+  .controller('ProjectsCtrl', function ($rootScope, $window, $route) {
     this.$route = $route;
-
     if ($rootScope.user == undefined || !$rootScope.user.authenticated) {
       $window.location.href = '#/loginscreen'
 

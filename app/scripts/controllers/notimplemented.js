@@ -2,19 +2,15 @@
 
 /**
  * @ngdoc function
- * @name januszeInterfejsowApp.controller:AboutCtrl
+ * @name januszeInterfejsowApp.controller:NotimplementedCtrl
  * @description
- * # AboutCtrl
+ * # NotimplementedCtrl
  * Controller of the januszeInterfejsowApp
  */
 angular.module('januszeInterfejsowApp')
-  .controller('AboutCtrl', function ($rootScope, $window, $route) {
+  .controller('NotimplementedCtrl', function ($route) {
     this.$route = $route;
-
-    if ($rootScope.user == undefined || !$rootScope.user.authenticated) {
-      $window.location.href = '#/loginscreen'
-
-    }
+    
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
