@@ -99,17 +99,22 @@ Logo styles
   display: inline-block;
 }
 
+/* Project styles */
 .project {
   width: 100%;
+  margin-bottom: 30px;
 }
 
-.project-header{
+.project-header {
   height: 50px;
   background-color: #00b3ee;
   border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 46px;
 }
 
-.project-title{
+.project-title {
   background-color: #0000FF;
   color: white;
   width: 14%;
@@ -118,9 +123,70 @@ Logo styles
   height: 100%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  line-height: 50px;
 }
 
-.project-summary{
+.project-summary {
   float: right;
   width: 86%;
+}
+
+.summary-cell {
+  width: 17%;
+  background-color: white;
+  border: 2px solid #00b3ee;
+  border-left: none;
+  float: left;
+}
+
+.summary-cell-right {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 15%;
+  font-weight: bold;
+}
+
+.project-body{
+  width: 86%;
+  height: 50px;
+  background-color: #0000FF;
+  float: right;
+}
+
+/* Project description styles */
+
+.project-desc {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.project-desc-header {
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.project-desc-title {
+  width: 14%;
+  margin: auto;
+  float: left;
+  height: 100%;
+  line-height: 50px;
+}
+
+.project-desc-summary {
+  float: right;
+  width: 86%;
+}
+
+.desc-summary-cell {
+  width: 17%;
+  float: left;
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.desc-summary-cell-right {
+  width: 15%;
 }
