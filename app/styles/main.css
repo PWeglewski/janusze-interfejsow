@@ -147,12 +147,59 @@ Logo styles
 }
 
 .project-body{
-  width: 86%;
-  height: 50px;
-  background-color: #0000FF;
-  float: right;
+  width: 100%;
 }
 
+.task-body{
+  height: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 2px solid #00b3ee;
+  border-top: none;
+}
+
+.add-task-button{
+  width: 14%;
+  height: 30px;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 0px;
+}
+
+.task-title{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 28px;
+  width: 14%;
+  background-color: #b3d4fc;
+  float: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.task-input{
+  height: 28px;
+}
+
+.task-regular-cell{
+  width: 14.65%;
+  background-color: white;
+  border-right: 2px solid #00b3ee;
+  /*border-left: none;*/
+  float: left;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 28px;
+}
+
+.task-summary-cell{
+  width: 12%;
+  font-weight: bold;
+  border: none;
+}
 /* Project description styles */
 
 .project-desc {
