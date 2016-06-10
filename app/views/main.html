@@ -14,19 +14,19 @@
       </div>
       <div class="project-desc-summary">
         <div class="desc-summary-cell">
-          <span>Mon</span>
+          <span>Monday</span>
         </div>
         <div class="desc-summary-cell">
-          <span>Tue</span>
+          <span>Tuesday</span>
         </div>
         <div class="desc-summary-cell">
-          <span>Wed</span>
+          <span>Wednesday</span>
         </div>
         <div class="desc-summary-cell">
-          <span>Thu</span>
+          <span>Thursday</span>
         </div>
         <div class="desc-summary-cell">
-          <span>Fri</span>
+          <span>Friday</span>
         </div>
         <div class="desc-summary-cell desc-summary-cell-right">
           <span>Total</span>
@@ -37,7 +37,7 @@
   <div class="project">
     <div class="project-header">
       <div class="project-title" ng-click="main.project1.showbody=!main.project1.showbody">
-        <span>Project Janusza</span>
+        <span>Project 1</span>
         <span class="glyphicon glyphicon-chevron-down"></span>
       </div>
       <div class="project-summary" ng-click="main.project1.showbody=true">
@@ -202,7 +202,328 @@
       </div>
       <button type="button" class="btn btn-success add-task-button" data-toggle="modal" data-target="#project1modal">+</button>
     </div>
-  </div>
+
+    <div class="project-header">
+      <div class="project-title" ng-click="main.project2.showbody=!main.project2.showbody">
+        <span>Project 2</span>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </div>
+      <div class="project-summary" ng-click="main.project2.showbody=true">
+        <div class="summary-cell">
+          <span>{{main.project2.weekSummary[0].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project2.weekSummary[1].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project2.weekSummary[2].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project2.weekSummary[3].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project2.weekSummary[4].hours}}h</span>
+        </div>
+        <div class="summary-cell summary-cell-right">
+          <span>{{main.project2.weekTotal}}h</span>
+        </div>
+      </div>
+    </div>
+    <div class=project-body ng-show="main.project2.showbody">
+      <div class="task-body" ng-show="main.project2.tasks[0].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project2.tasks[0].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[0].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[0].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[0].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[0].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[0].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project2.tasks[0].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project2.tasks[1].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project2.tasks[1].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[1].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[1].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[1].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[1].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[1].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project2.tasks[1].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project2.tasks[2].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project2.tasks[2].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[2].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[2].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[2].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[2].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[2].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project2.tasks[2].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project2.tasks[3].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project2.tasks[3].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[3].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[3].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[3].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[3].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[3].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project2.tasks[3].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project2.tasks[4].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project2.tasks[4].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[4].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[4].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[4].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[4].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[4].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project2.tasks[4].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project2.tasks[5].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project2.tasks[5].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[5].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[5].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[5].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[5].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project2)" ng-model="main.project2.tasks[5].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project2.tasks[5].total}}h</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success add-task-button" data-toggle="modal" data-target="#project2modal">+</button>
+    </div>
+
+    <div class="project-header">
+      <div class="project-title" ng-click="main.project3.showbody=!main.project3.showbody">
+        <span>T/R/Absence</span>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </div>
+      <div class="project-summary" ng-click="main.project3.showbody=true">
+        <div class="summary-cell">
+          <span>{{main.project3.weekSummary[0].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project3.weekSummary[1].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project3.weekSummary[2].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project3.weekSummary[3].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.project3.weekSummary[4].hours}}h</span>
+        </div>
+        <div class="summary-cell summary-cell-right">
+          <span>{{main.project3.weekTotal}}h</span>
+        </div>
+      </div>
+    </div>
+    <div class=project-body ng-show="main.project3.showbody">
+      <div class="task-body" ng-show="main.project3.tasks[0].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project3.tasks[0].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[0].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[0].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[0].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[0].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[0].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project3.tasks[0].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project3.tasks[1].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project3.tasks[1].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[1].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[1].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[1].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[1].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[1].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project1.tasks[1].total}}h</span>
+        </div>
+      </div>
+      <div class="task-body" ng-show="main.project3.tasks[2].isDisplayed">
+        <div class="task-title">
+          <span>{{main.project3.tasks[2].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[2].days[0].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[2].days[1].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[2].days[2].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[2].days[3].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell">
+          <input ng-change="main.calculate(main.project3)" ng-model="main.project3.tasks[2].days[4].hours" type="text" class="form-control task-input">
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.project3.tasks[2].total}}h</span>
+        </div>
+      </div>      
+      <button type="button" class="btn btn-success add-task-button" data-toggle="modal" data-target="#project3modal">+</button>
+    </div>
+    
+    <div class="project-header">
+      <div class="project-title" ng-click="main.overtime.showbody=!main.overtime.showbody">
+        <span>Summary</span>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </div>
+      <div class="project-summary" ng-click="main.overtime.showbody=true">
+        <div class="summary-cell">
+          <span>{{main.overtime.weekSummary[0].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.overtime.weekSummary[1].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.overtime.weekSummary[2].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.overtime.weekSummary[3].hours}}h</span>
+        </div>
+        <div class="summary-cell">
+          <span>{{main.overtime.weekSummary[4].hours}}h</span>
+        </div>
+        <div class="summary-cell summary-cell-right">
+          <span>{{main.overtime.weekTotal}}h</span>
+        </div>
+      </div>
+    </div>
+    <div class=project-body ng-show="main.overtime.showbody">
+      <div class="task-body" ng-show="main.overtime.tasks[0].isDisplayed=true">
+        <div class="task-title">
+          <span>{{main.overtime.tasks[0].name}}</span>
+        </div>
+        <div class="task-regular-cell">
+          <span>{{main.overtime.tasks[0].days[0].overtime}}h</span>
+        </div>
+        <div class="task-regular-cell">
+          <span>{{main.overtime.tasks[0].days[1].overtime}}h</span>
+        </div>
+        <div class="task-regular-cell">
+          <span>{{main.overtime.tasks[0].days[2].overtime}}h</span>
+        </div>
+        <div class="task-regular-cell">
+          <span>{{main.overtime.tasks[0].days[3].overtime}}h</span>
+        </div>
+        <div class="task-regular-cell">
+          <span>{{main.overtime.tasks[0].days[4].overtime}}h</span>
+        </div>
+        <div class="task-regular-cell task-summary-cell">
+          <span>{{main.overtime.tasks[0].total}}h</span>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  
   <div id="project1modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -219,6 +540,56 @@
             <li><a data-dismiss="modal" ng-click="main.project1.tasks[2].isDisplayed=!main.project1.tasks[2].isDisplayed">{{main.project1.tasks[2].name}}</a></li>
             <li><a data-dismiss="modal" ng-click="main.project1.tasks[3].isDisplayed=!main.project1.tasks[3].isDisplayed">{{main.project1.tasks[3].name}}</a></li>
             <li><a data-dismiss="modal" ng-click="main.project1.tasks[4].isDisplayed=!main.project1.tasks[4].isDisplayed">{{main.project1.tasks[4].name}}</a></li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div id="project2modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" >
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add new task</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><a data-dismiss="modal" ng-click="main.project2.tasks[0].isDisplayed=!main.project2.tasks[0].isDisplayed">{{main.project2.tasks[0].name}}</a></li>
+            <li><a data-dismiss="modal" ng-click="main.project2.tasks[1].isDisplayed=!main.project2.tasks[1].isDisplayed">{{main.project2.tasks[1].name}}</a></li>
+            <li><a data-dismiss="modal" ng-click="main.project2.tasks[2].isDisplayed=!main.project2.tasks[2].isDisplayed">{{main.project2.tasks[2].name}}</a></li>
+            <li><a data-dismiss="modal" ng-click="main.project2.tasks[3].isDisplayed=!main.project2.tasks[3].isDisplayed">{{main.project2.tasks[3].name}}</a></li>
+            <li><a data-dismiss="modal" ng-click="main.project2.tasks[4].isDisplayed=!main.project2.tasks[4].isDisplayed">{{main.project2.tasks[4].name}}</a></li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div id="project3modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" >
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add new task</h4>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><a data-dismiss="modal" ng-click="main.project3.tasks[0].isDisplayed=!main.project3.tasks[0].isDisplayed">{{main.project3.tasks[0].name}}</a></li>
+            <li><a data-dismiss="modal" ng-click="main.project3.tasks[1].isDisplayed=!main.project3.tasks[1].isDisplayed">{{main.project3.tasks[1].name}}</a></li>
+            <li><a data-dismiss="modal" ng-click="main.project3.tasks[2].isDisplayed=!main.project3.tasks[2].isDisplayed">{{main.project3.tasks[2].name}}</a></li>
           </ul>
         </div>
         <div class="modal-footer">
