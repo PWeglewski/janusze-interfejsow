@@ -9,7 +9,9 @@
  */
 angular.module('januszeInterfejsowApp')
   .controller('MainCtrl', function ($rootScope, $window, $route) {
-    this.$route = $route;
+    var scope = this;
+    scope.$route = $route;
+    
 
     // if ($rootScope.user == undefined || !$rootScope.user.authenticated) {
     //   $window.location.href = '#/loginscreen'
@@ -22,7 +24,7 @@ angular.module('januszeInterfejsowApp')
 
     $rootScope.user = superuser;
 
-    this.awesomeThings = [
+    scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
@@ -30,7 +32,7 @@ angular.module('januszeInterfejsowApp')
 
     
 
-    this.project1 = {
+    scope.project1 = {
       'showbody': false,
       'weekSummary': [{'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}],
       'weekTotal': 0,
@@ -74,7 +76,7 @@ angular.module('januszeInterfejsowApp')
       ]
     };
     
-    this.project2 = {
+    scope.project2 = {
       'showbody': false,
       'weekSummary': [{'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}],
       'weekTotal': 0,
@@ -118,7 +120,7 @@ angular.module('januszeInterfejsowApp')
       ]
     };
     
-    this.project3 = {
+    scope.project3 = {
       'showbody': false,
       'weekSummary': [{'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}],
       'weekTotal': 0,
@@ -144,7 +146,7 @@ angular.module('januszeInterfejsowApp')
       ]
     };
     
-    this.overtime = {
+    scope.overtime = {
       'showbody': false,
       'weekSummary': [{'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}, {'hours': 0}],
       'weekTotal': 0,
@@ -158,7 +160,7 @@ angular.module('januszeInterfejsowApp')
       ]
     };
     
-    this.calculate = function (project) {
+    scope.calculate = function (project) {
       console.log('test');
       project.weekSummary.forEach(function(day, index){
         day.hours=0;
@@ -175,6 +177,21 @@ angular.module('januszeInterfejsowApp')
         });
       });
       
+      scope.overtime.weekSummary.forEach(function (day, index) {
+        day.hours = 0;
+        day.hours += scope.project1.weekSummary[index].hours;
+        day.hours += scope.project2.weekSummary[index].hours;
+        day.hours += scope.project3.weekSummary[index].hours;
+      });
+      scope.overtime.weekTotal = 0;
+      scope.overtime.weekSummary.forEach(function (day, index) {
+        scope.overtime.weekTotal += day.hours
+        var zakres = 8;
+        if(day.hours > zakres) {
+          scope.overtime.tasks[0].days[index].overtime = day.hours;
+          scope.overtime.tasks[0].days[index].overtime -= zakres;
+        }
+      });  
       console.log(project);
     };
     
