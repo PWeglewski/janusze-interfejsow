@@ -103,108 +103,187 @@ Logo styles
 .project {
   width: 100%;
   margin-bottom: 30px;
+	font-weight: bold;
 }
 
 .project-header {
   height: 50px;
-  background-color: #00b3ee;
-  border-radius: 10px;
+  background-color: transparent;
+  border-radius: 0px;
   text-align: center;
   vertical-align: middle;
-  line-height: 46px;
-}
-
-.project-title {
-  background-color: #0000FF;
-  color: white;
-  width: 14%;
-  margin: auto;
-  float: left;
-  height: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   line-height: 50px;
 }
 
 .project-summary {
+	color: #f1f1f2;
   float: right;
   width: 86%;
+	background-color: rgba(127,168,179,1);
 }
 
 .summary-cell {
-  width: 17%;
-  background-color: white;
-  border: 2px solid #00b3ee;
+  width: 16.666%;
+	height: 50px;
+	background-color: transparent;
+  border-top: 4px solid rgba(255,255,255,1);
   border-left: none;
   float: left;
 }
 
+.project-title {
+  background-color: rgba(127,168,179,1);
+  color: white;
+  width: 14%;
+  margin: auto;
+  float: left;
+	border-top: 4px solid white;
+	border-right: 2px solid #bec2ce;
+  line-height: 46px;
+}
+
+.project > .project-header:nth-last-of-type(2) {
+	background-color: rgba(229,211,134,1);
+	color: rgba(64,64,64,1);
+	font-weight: bold;
+}
+
+.project > .project-header:nth-last-of-type(2) > .project-title {
+	background-color: transparent;
+	color: rgba(64,64,64,1);
+}
+
+.project > .project-header:nth-last-of-type(2) > .project-summary {
+background-color: transparent;
+color: rgba(64,64,64,1);
+}
+
+.project > .project-header:nth-last-of-type(2) > .project-summary > .summary-cell-right {
+	background-color: rgba(206,174,101,1);
+}
+
+.summary-cell:nth-child(even) {
+	background-color: rgba(104,104,104,0.1);
+	border-top: 4px solid rgba(255,255,255,0.5);
+}
+
+.btn-success {
+	background-color: #81c66d;
+	border: none;
+	border-radius: 0px;
+}
+
 .summary-cell-right {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 15%;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 16.666%;
   font-weight: bold;
 }
 
-.project-body{
+.project-summary > .summary-cell:last-child {
+	background-color: #809da0;
+}
+
+.project-body {
   width: 100%;
+	background-color: white;
 }
 
-.task-body{
+.task-body {
   height: 30px;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  border: 2px solid #00b3ee;
-  border-top: none;
+  background-color: rgba(223,229,242,1);
+	margin-left: 3%;
+	width: 97%;
+	color: #58585b;
 }
 
-.add-task-button{
-  width: 14%;
+.task-body:first-child {
+	height: 32px;
+}
+
+.add-task-button {
+  width: 11%;
   height: 30px;
   font-size: 120%;
   font-weight: bold;
   text-align: center;
+	margin-left: 3%;
   vertical-align: middle;
   line-height: 0px;
 }
 
-.task-title{
+.task-title {
   text-align: center;
   vertical-align: middle;
-  line-height: 28px;
-  width: 14%;
-  background-color: #b3d4fc;
+  line-height: 26px;
+  width: 11.34%;
+  background-color: transparent;
   float: left;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+	border-right: 2px solid #bec2ce;
+	border-bottom: 2px solid rgba(255,255,255,1);
+	border-top: 2px solid rgba(255,255,255,1);
 }
 
-.task-input{
+.task-body:first-child > .task-title {
+	border-top: 4px solid rgba(255,255,255,1);
+}
+
+.task-input {
   height: 28px;
 }
 
-.task-regular-cell{
-  width: 14.65%;
-  background-color: white;
-  border-right: 2px solid #00b3ee;
-  /*border-left: none;*/
+.task-regular-cell {
+  width: 14.776%;
+  background-color: #transparent;
+	border: none;
   float: left;
   height: 100%;
   text-align: center;
   vertical-align: middle;
   line-height: 28px;
+	border-top-width: 0px;
+	border-bottom: 2px solid rgba(255,255,255,1);
+	border-top: 2px solid rgba(255,255,255,1);
 }
 
-.task-summary-cell{
-  width: 12%;
+.task-regular-cell:nth-child(odd) {
+	background-color: rgba(104,104,104,0.1);
+	border-bottom: 2px solid rgba(255,255,255,0.5);
+	border-top: 2px solid rgba(255,255,255,0.5);
+}
+
+.task-regular-cell:last-child {
+	background-color: #d0cfd1;
+}
+
+.task-body:first-child > .task-regular-cell {
+	border-top: 4px solid rgba(255,255,255,1);
+	line-height: 26px;
+}
+
+.task-body:first-child > .task-regular-cell:nth-child(odd) {
+	border-top: 4px solid rgba(255,255,255,0.5);
+}
+
+.form-control { 
+	background-color: transparent;
+	border:none;
+	border-radius: 0px;
+	border-color: transparent;
+	box-shadow: none;
+	text-align: center;
+}
+
+.task-summary-cell {
+  width: 14.776%;
   font-weight: bold;
   border: none;
+	background-color: #d0cfd1;
 }
 /* Project description styles */
 
 .project-desc {
   width: 100%;
-  margin-bottom: 10px;
 }
 
 .project-desc-header {
@@ -228,12 +307,21 @@ Logo styles
 }
 
 .desc-summary-cell {
-  width: 17%;
+  width: 16.666%;
   float: left;
   font-size: 130%;
   font-weight: bold;
+	background-color: #c9dff4;
+}
+
+.desc-summary-cell:nth-child(even) {
+	background-color: #a1c3d5;
 }
 
 .desc-summary-cell-right {
-  width: 15%;
+  width: 16.66%;
+}
+
+.desc-summary-cell:last-child {
+	background-color: #e5d386;
 }
