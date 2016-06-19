@@ -110,6 +110,7 @@ Logo styles
   height: 50px;
   background-color: transparent;
   border-radius: 0px;
+	position: relative;
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
@@ -119,6 +120,7 @@ Logo styles
 	color: #f1f1f2;
   float: right;
   width: 86%;
+	position: relative;
 	background-color: rgba(127,168,179,1);
 }
 
@@ -141,6 +143,19 @@ Logo styles
 	border-right: 2px solid #bec2ce;
   line-height: 46px;
 }
+/*
+.project-title:before {
+	content:"";
+	width: 0;
+	height: 0;
+	display: inline;
+	position: absolute;
+	bottom: 0px;
+	right: 86%;
+	border-bottom: 15px solid rgba(88,88,88,1);
+	border-left: 15px solid transparent;
+}
+*/
 
 .project > .project-header:nth-last-of-type(2) {
 	background-color: rgba(229,211,134,1);
@@ -164,13 +179,38 @@ color: rgba(64,64,64,1);
 
 .summary-cell:nth-child(even) {
 	background-color: rgba(104,104,104,0.1);
-	border-top: 4px solid rgba(255,255,255,0.5);
+	border-top: 4px solid rgba(230,232,239,1); 
+}
+
+.summary-cell:nth-child(even):after {
+	content: "";
+	bottom: -30px;
+	width: 16.666%;
+	height: 30px;
+	display: block;
+	position: absolute;
+	background-color: rgba(230,232,239,1); 
 }
 
 .btn-success {
 	background-color: #81c66d;
 	border: none;
 	border-radius: 0px;
+}
+
+.submit-report-button {
+	position: relative;
+	width: 28%;
+	height: 50px;
+	left: 72%;
+	font-size: 140%;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px
+}
+
+.submit-report-button:focus {
+	outline: none !important;
 }
 
 .summary-cell-right {
@@ -184,6 +224,32 @@ color: rgba(64,64,64,1);
 	background-color: #809da0;
 }
 
+.project-summary > .summary-cell-right:before {
+	content:"";
+	width: 0;
+	height: 0;
+	display: inline;
+	position: absolute;
+	left: 83.2%;
+	border-top: 23px solid transparent;
+	border-left: 30px solid rgba(127,168,179,1);
+	border-bottom: 23px solid transparent;
+	filter: drop-shadow(3px 0px 1px rgba(0,0,0,0.1));
+}
+
+.project > .project-header:nth-last-of-type(2) > .project-summary > .summary-cell-right:before {
+	content:"";
+	width: 20px;
+	height: 0;
+	display: inline;
+	position: absolute;
+	left: 83.2%;
+	border-top: 23px solid transparent;
+	border-left: 30px solid rgba(229,211,134,1);
+	border-bottom: 23px solid transparent;
+	filter: drop-shadow(3px 0px 1px rgba(0,0,0,0.1));
+}
+
 .project-body {
   width: 100%;
 	background-color: white;
@@ -195,21 +261,35 @@ color: rgba(64,64,64,1);
 	margin-left: 3%;
 	width: 97%;
 	color: #58585b;
-}
-
-.task-body:first-child {
-	height: 32px;
+	position: relative;
 }
 
 .add-task-button {
+	box-sizing: border-box;
   width: 11%;
+	border-right: 89% solid white;
   height: 30px;
   font-size: 120%;
   font-weight: bold;
   text-align: center;
 	margin-left: 3%;
   vertical-align: middle;
-  line-height: 0px;
+  line-height: 26px;
+	padding: 0px;
+	border-top: 4px solid rgba(255,255,255,1);
+}
+
+.add-task-button:hover {
+	border-top: 4px solid rgba(255,255,255,1);
+}
+
+.add-task-button:focus:active {
+	border-top: 4px solid rgba(255,255,255,1);
+}
+
+.add-task-button:focus {
+	border-top: 4px solid rgba(255,255,255,1);
+	outline: none !important;
 }
 
 .task-title {
@@ -220,12 +300,8 @@ color: rgba(64,64,64,1);
   background-color: transparent;
   float: left;
 	border-right: 2px solid #bec2ce;
-	border-bottom: 2px solid rgba(255,255,255,1);
-	border-top: 2px solid rgba(255,255,255,1);
-}
-
-.task-body:first-child > .task-title {
 	border-top: 4px solid rgba(255,255,255,1);
+	white-space: normal;
 }
 
 .task-input {
@@ -242,14 +318,12 @@ color: rgba(64,64,64,1);
   vertical-align: middle;
   line-height: 28px;
 	border-top-width: 0px;
-	border-bottom: 2px solid rgba(255,255,255,1);
-	border-top: 2px solid rgba(255,255,255,1);
+	border-top: 4px solid rgba(255,255,255,1);
 }
 
 .task-regular-cell:nth-child(odd) {
 	background-color: rgba(104,104,104,0.1);
-	border-bottom: 2px solid rgba(255,255,255,0.5);
-	border-top: 2px solid rgba(255,255,255,0.5);
+	border-top: 4px solid rgba(230,232,239,1); 
 }
 
 .task-regular-cell:last-child {
@@ -262,7 +336,17 @@ color: rgba(64,64,64,1);
 }
 
 .task-body:first-child > .task-regular-cell:nth-child(odd) {
-	border-top: 4px solid rgba(255,255,255,0.5);
+	border-top: 4px solid rgba(230,232,239,1); 
+}
+
+.task-regular-cell:nth-child(odd):after {
+	content: "";
+	top: 30px;
+	width: 14.776%;
+	height: 30px;
+	display: block;
+	position: absolute;
+	background-color: rgba(230,232,239,1); 
 }
 
 .form-control { 
@@ -279,6 +363,19 @@ color: rgba(64,64,64,1);
   font-weight: bold;
   border: none;
 	background-color: #d0cfd1;
+}
+
+.task-summary-cell:before {
+	content:"";
+	width: 0;
+	height: 0;
+	display: inline;
+	position: absolute;
+	left: 85%;
+	border-top: 13px solid transparent;
+	border-left: 20px solid rgba(223,229,242,1);
+	border-bottom: 13px solid transparent;
+	filter: drop-shadow(3px 0px 1px rgba(0,0,0,0.1));
 }
 /* Project description styles */
 
