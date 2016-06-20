@@ -38,7 +38,8 @@
     <div class="project-header">
       <div class="project-title" ng-click="main.project1.showbody=!main.project1.showbody">
         <span>Project 1</span>
-        <span class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-hide="main.project1.showbody" class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-show="main.project1.showbody" class="glyphicon glyphicon-chevron-up"></span>
       </div>
       <div class="project-summary" ng-click="main.project1.showbody=true">
         <div class="summary-cell">
@@ -206,7 +207,8 @@
     <div class="project-header">
       <div class="project-title" ng-click="main.project2.showbody=!main.project2.showbody">
         <span>Project 2</span>
-        <span class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-hide="main.project2.showbody" class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-show="main.project2.showbody" class="glyphicon glyphicon-chevron-up"></span>
       </div>
       <div class="project-summary" ng-click="main.project2.showbody=true">
         <div class="summary-cell">
@@ -374,7 +376,8 @@
     <div class="project-header">
       <div class="project-title" ng-click="main.project3.showbody=!main.project3.showbody">
         <span>T/R/Absence</span>
-        <span class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-hide="main.project3.showbody" class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-show="main.project3.showbody" class="glyphicon glyphicon-chevron-up"></span>
       </div>
       <div class="project-summary" ng-click="main.project3.showbody=true">
         <div class="summary-cell">
@@ -466,14 +469,15 @@
         <div class="task-regular-cell task-summary-cell">
           <span>{{main.project3.tasks[2].total}}h</span>
         </div>
-      </div>      
+      </div>
       <button type="button" class="btn btn-success add-task-button" data-toggle="modal" data-target="#project3modal">+</button>
     </div>
-    
+
     <div class="project-header">
       <div class="project-title" ng-click="main.overtime.showbody=!main.overtime.showbody">
         <span>Summary</span>
-        <span class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-hide="main.overtime.showbody" class="glyphicon glyphicon-chevron-down"></span>
+        <span ng-show="main.overtime.showbody" class="glyphicon glyphicon-chevron-up"></span>
       </div>
       <div class="project-summary" ng-click="main.overtime.showbody=true">
         <div class="summary-cell">
@@ -521,9 +525,9 @@
         </div>
       </div>
     </div>
-  </div> 
-  
-  
+  </div>
+
+
   <div id="project1modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -549,7 +553,7 @@
 
     </div>
   </div>
-  
+
   <div id="project2modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -575,7 +579,7 @@
 
     </div>
   </div>
-  
+
   <div id="project3modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
